@@ -14,10 +14,11 @@ public class FootballPlayer : MonoBehaviour
     {
         sr = GetComponent<SpriteRenderer>();
         Selected(false);
+        
     }
     private void OnMouseDown()
     {
-        Selected(true);
+        Controller.SetCurrentSelection(this);
     }
     public void Selected(bool isSelected)
     {
